@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: picarlie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: picarlie <picarlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:07:58 by picarlie          #+#    #+#             */
-/*   Updated: 2024/04/02 18:54:17 by picarlie         ###   ########.fr       */
+/*   Updated: 2024/04/09 17:29:03 by picarlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 int	main(int argc, char **argv)
 {
-
+	t_fractal	fractal;
+	
+	if (argc == 2 && !ft_strncmp(argv[1], "mandelbrot", 10))
 	return(0);
 }
