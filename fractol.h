@@ -6,7 +6,7 @@
 /*   By: picarlie <picarlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:06:23 by picarlie          #+#    #+#             */
-/*   Updated: 2024/04/09 17:26:15 by picarlie         ###   ########.fr       */
+/*   Updated: 2024/04/09 18:28:05 by picarlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,9 @@ typedef struct	s_fractal
 	t_img;
 	
 };	t_fractal;
+
+/*Init functions*/
+
+void	fractal_init(t_fractal *fractal);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: picarlie <picarlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:20:17 by picarlie          #+#    #+#             */
-/*   Updated: 2024/04/09 18:23:05 by picarlie         ###   ########.fr       */
+/*   Updated: 2024/04/09 18:27:02 by picarlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void	malloc_error()
+static void	malloc_error() //static means that this function is only for this file ie no prototype need in header file
 {
 	
 }
