@@ -6,15 +6,22 @@
 /*   By: picarlie <picarlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:20:17 by picarlie          #+#    #+#             */
-/*   Updated: 2024/04/09 18:27:02 by picarlie         ###   ########.fr       */
+/*   Updated: 2024/04/16 16:13:57 by picarlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void	malloc_error() //static means that this function is only for this file ie no prototype need in header file
+static void	malloc_error(void) //static means that this function is only for this file ie no prototype needed in header file
 {
-	
+	perror("Problems with malloc");
+	exit(EXIT_FAILURE);
+}
+
+void	data_init(t_fractal *fractal)
+{
+	fractal->escape_value = 4; // 2 * 2 hypotenuse
+	fractal->iterations_definition = 42;
 }
 
 /*
@@ -44,5 +51,5 @@ void	fractal_init(t_fractal *fractal)
 	fractal->img.pixels_ptr = mlx_get_data_addr(fractal->mlx_connection, &fractal->img.bpp, &fractal->img.line_len, &fractal->img.endian);
 	
 	//events_init(fractal) ==> TODO
-	//data_init(fractal) ==> TODO
+	data_init(fractal);
 }
