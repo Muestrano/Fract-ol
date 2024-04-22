@@ -6,7 +6,7 @@
 /*   By: picarlie <picarlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:06:23 by picarlie          #+#    #+#             */
-/*   Updated: 2024/04/16 16:47:06 by picarlie         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:52:16 by picarlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <math.h>
-# include "./minilibx-linux/mlx.h"
-# include "./Libft/libft.h"
+# include "minilibx-linux/mlx.h"
+# include "Libft/libft.h"
 
 # define ERROR_MESSAGE "Please enter \n\t\"./fractol mandelbrot\" or \n\t\"./fractol julia <value_1> <value_2>\"\n"
 
@@ -81,10 +81,15 @@ typedef struct	s_fractal
 
 void	fractal_init(t_fractal *fractal);
 
+/*Render*/
+
+void	fractal_render(t_fractal *fractal);
+
 /*Maths*/
 double	map(double unscaled_num, double new_min, double new_max, double old_min, double old_max);
 t_complex	sum_complex(t_complex z1, t_complex z2);
 t_complex	square_complex(t_complex z);
+
 #endif
 
 

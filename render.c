@@ -6,7 +6,7 @@
 /*   By: picarlie <picarlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 18:51:22 by picarlie          #+#    #+#             */
-/*   Updated: 2024/04/16 18:53:15 by picarlie         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:05:56 by picarlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,21 @@
 static void	my_pixel_put(int x, int y, t_img *img, int color)
 {
 	int	offset;
+
 	offset = (y * img->line_len) + (x * (img->bpp / 8));
 	*(unsigned int *)(img->pixels_ptr + offset) = color;
 }
 
-void	handle_pixel(int x, int y, t_fractal *fractal)
+/*static void	my_pixel_put(int x, int y, t_img *img, int color)
+{
+	char	*dst;
+
+	dst = img->pixels_ptr + (y * img->line_len + x
+			* (img->bpp / 8));
+	*(unsigned int *)dst = color;
+}*/
+
+static void	handle_pixel(int x, int y, t_fractal *fractal)
 {
 	t_complex	z;
 	t_complex	c;
